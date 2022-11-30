@@ -12,23 +12,13 @@ namespace ConsoleItalianRestaurant.Drinks
     {
         public string Name { get; }
         public decimal Price { get;}
-        public decimal Volume { get;}
-
-        private static List<Drink> menu = DrinkFactory.MakeDrinksMenu();
+        public decimal Volume { get;}        
         
         public Drink(string name, decimal price, decimal volume)
         {
             Name= name;
             Price = price;
             Volume = volume;
-        }
-
-        public static void DrinksMenu()
-        {
-            foreach (Drink item in menu)
-            {
-                Console.WriteLine(item.ToString());
-            }
-        }
+        }        
     }
 }

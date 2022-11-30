@@ -5,6 +5,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using ConsoleItalianRestaurant.Drinks.DrinksFactory;
+using ConsoleItalianRestaurant.Drinks;
 
 namespace ConsoleItalianRestaurant.Restaurant.Menus
 {
@@ -23,17 +25,23 @@ namespace ConsoleItalianRestaurant.Restaurant.Menus
             }
         }
 
-        private List<Food> menu;
+        private List<Food> foodsMenu;
+        private List<Drink> drinksMenu;
 
         public Menu()
         {
-            menu = FoodFactory.MenuOfTheDay();
+            foodsMenu = FoodFactory.MenuOfTheDay();
+            drinksMenu = DrinkFactory.MakeDrinksMenu();
         }
 
         public void PrintMenu()
         {
             Console.WriteLine($"Todays menu ({DateTime.Now:d}):");
-            foreach (Food item in menu)
+            foreach (Food item in foodsMenu)
+            {
+                Console.WriteLine(item.ToString());
+            }
+            foreach (Drink item in drinksMenu)
             {
                 Console.WriteLine(item.ToString());
             }
