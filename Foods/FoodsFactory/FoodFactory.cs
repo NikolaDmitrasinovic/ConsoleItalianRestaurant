@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ConsoleItalianRestaurant.Foods.FoodsFactory
 {
-    internal static class FoodFactroy
+    internal static class FoodFactory
     {
         private static List<Pizza> MakePizzaList()
         {
@@ -68,13 +68,13 @@ namespace ConsoleItalianRestaurant.Foods.FoodsFactory
         {
             Random rdm = new Random();
             List<Side> sidesList = new List<Side>();
-            List<SidesEnum> sidesEnum = new List<SidesEnum>();
-            SidesEnum name;
+            List<SideDishEnum> sidesEnum = new List<SideDishEnum>();
+            SideDishEnum name;
             int counter = 0;
 
             do
             {
-                name = (SidesEnum)rdm.Next(0, 8);
+                name = (SideDishEnum)rdm.Next(0, 8);
 
                 if (!sidesEnum.Contains(name))
                 {

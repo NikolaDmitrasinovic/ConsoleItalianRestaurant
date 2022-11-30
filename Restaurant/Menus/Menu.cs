@@ -27,7 +27,7 @@ namespace ConsoleItalianRestaurant.Restaurant.Menus
 
         public Menu()
         {
-            menu = FoodFactroy.MenuOfTheDay();
+            menu = FoodFactory.MenuOfTheDay();
         }
 
         public void PrintMenu()
