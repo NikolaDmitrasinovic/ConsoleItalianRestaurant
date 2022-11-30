@@ -29,7 +29,7 @@ namespace ConsoleItalianRestaurant.Foods.FoodsFactory
 
             for (int i = 0; i < 4; i++)
             {
-                Pizza pizza = new Pizza { Name = pizzaEnums[i].ToString(), Price = rdm.Next(300, 601) };
+                Pizza pizza = new Pizza { Name = pizzaEnums[i].ToString(), Price = rdm.Next(300, 601), SidesList = new List<Side>() };
                 pizzaList.Add(pizza);
             }
 
@@ -57,7 +57,7 @@ namespace ConsoleItalianRestaurant.Foods.FoodsFactory
 
             for (int i = 0; i < 5; i++)
             {
-                Pasta pasta = new Pasta { Name = pastaEnums[i].ToString(), Price = rdm.Next(300, 601) };
+                Pasta pasta = new Pasta { Name = pastaEnums[i].ToString(), Price = rdm.Next(300, 601), SidesList = new List<Side>() };
                 pastaList.Add(pasta);
             }
 

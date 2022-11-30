@@ -11,5 +11,6 @@ namespace ConsoleItalianRestaurant.Foods
     {
         public string Name { get; set; }
         public decimal Price { get; set; }
+        public List<Side> SidesList { get; set; }
     }
 }
