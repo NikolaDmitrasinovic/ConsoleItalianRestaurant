@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ConsoleItalianRestaurant.Drinks.DrinksFactory
+namespace ConsoleItalianRestaurant.Kitchen.Drinks.DrinksFactory
 {
     internal static class DrinkFactory
     {

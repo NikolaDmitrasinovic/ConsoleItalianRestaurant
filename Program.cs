@@ -1,5 +1,4 @@
-﻿using ConsoleItalianRestaurant.Drinks;
-using ConsoleItalianRestaurant.Foods;
+﻿using ConsoleItalianRestaurant.Restaurant.Menus;
 
 namespace ConsoleItalianRestaurant
 {
@@ -8,11 +7,8 @@ namespace ConsoleItalianRestaurant
         static void Main(string[] args)
         {
             Console.WriteLine("Italian Restaurant!");
-            Food.FoodsMenu();
-            Drink.DrinksMenu();
-
-            //testarea
-            
+            Menu ourMenuOfTheDay = new Menu();
+            ourMenuOfTheDay.PrintMenu();
         }
     }
 }

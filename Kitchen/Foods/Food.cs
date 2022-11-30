@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using ConsoleItalianRestaurant.Foods.IFoods;
+using ConsoleItalianRestaurant.Kitchen.Foods.IFoods;
 
-namespace ConsoleItalianRestaurant.Foods
+namespace ConsoleItalianRestaurant.Kitchen.Foods
 {
     internal abstract class Food : IFood
     {

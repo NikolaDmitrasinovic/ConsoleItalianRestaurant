@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ConsoleItalianRestaurant.Drinks
+namespace ConsoleItalianRestaurant.Kitchen.Drinks
 {
     internal class Water : Drink
     {

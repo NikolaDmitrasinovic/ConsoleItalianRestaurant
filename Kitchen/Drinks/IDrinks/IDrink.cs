@@ -4,11 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ConsoleItalianRestaurant.Foods.IFoods
+namespace ConsoleItalianRestaurant.Kitchen.Drinks.IDrinks
 {
-    internal interface IFood
-    {  
+    internal interface IDrink
+    {
         string Name { get; }
         decimal Price { get; }
+        decimal Volume { get; }
     }
 }

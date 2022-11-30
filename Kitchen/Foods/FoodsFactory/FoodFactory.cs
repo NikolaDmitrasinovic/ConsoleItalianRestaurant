@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ConsoleItalianRestaurant.Foods.FoodsFactory
+namespace ConsoleItalianRestaurant.Kitchen.Foods.FoodsFactory
 {
     internal static class FoodFactory
     {
@@ -18,14 +18,14 @@ namespace ConsoleItalianRestaurant.Foods.FoodsFactory
 
             do
             {
-                name = (PizzaEnum)rdm.Next(0, 6);                
+                name = (PizzaEnum)rdm.Next(0, 6);
 
                 if (!pizzaEnums.Contains(name))
                 {
                     pizzaEnums.Add(name);
                     counter++;
                 }
-            } while (counter<4);
+            } while (counter < 4);
 
             for (int i = 0; i < 4; i++)
             {
@@ -107,7 +107,7 @@ namespace ConsoleItalianRestaurant.Foods.FoodsFactory
             {
                 menu.Add(s);
             }
-            
+
             return menu;
         }
     }

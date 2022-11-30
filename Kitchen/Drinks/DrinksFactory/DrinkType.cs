@@ -1,4 +1,4 @@
-﻿namespace ConsoleItalianRestaurant.Drinks.DrinksFactory
+﻿namespace ConsoleItalianRestaurant.Kitchen.Drinks.DrinksFactory
 {
     enum JuiceEnum
     {

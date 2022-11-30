@@ -1,12 +1,12 @@
-﻿using ConsoleItalianRestaurant.Foods.FoodsFactory;
-using ConsoleItalianRestaurant.Foods;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using ConsoleItalianRestaurant.Drinks.DrinksFactory;
-using ConsoleItalianRestaurant.Drinks;
+using ConsoleItalianRestaurant.Kitchen.Foods.FoodsFactory;
+using ConsoleItalianRestaurant.Kitchen.Foods;
+using ConsoleItalianRestaurant.Kitchen.Drinks.DrinksFactory;
+using ConsoleItalianRestaurant.Kitchen.Drinks;
 
 namespace ConsoleItalianRestaurant.Restaurant.Menus
 {

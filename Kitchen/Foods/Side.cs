@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Xml.Linq;
 
-namespace ConsoleItalianRestaurant.Foods
+namespace ConsoleItalianRestaurant.Kitchen.Foods
 {
     internal class Side : Food
     {

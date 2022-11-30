@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ConsoleItalianRestaurant.Foods
+namespace ConsoleItalianRestaurant.Kitchen.Foods
 {
     internal class Pasta : Food
     {
