@@ -22,7 +22,7 @@
         Lasagne
     }
 
-    enum SidesEnum
+    enum SideDishEnum
     {
         Ketchup,
         Oregano,
