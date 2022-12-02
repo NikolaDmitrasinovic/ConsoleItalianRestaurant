@@ -3,11 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using ConsoleItalianRestaurant.Kitchen.Foods.IFoods;
 
 namespace ConsoleItalianRestaurant.Kitchen.Foods
 {
-    internal abstract class Food : IFood
+    internal abstract class Food : IKitchen
     {
         public string Name { get; set; }
         public decimal Price { get; set; }
