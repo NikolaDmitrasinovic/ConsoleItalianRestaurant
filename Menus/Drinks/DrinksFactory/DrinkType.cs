@@ -1,6 +1,6 @@
-﻿namespace ConsoleItalianRestaurant.Kitchen.Drinks.DrinksFactory
+﻿namespace ConsoleItalianRestaurant.Menus.Drinks.DrinksFactory
 {
-    enum JuiceEnum
+    enum JuiceType
     {
         Apple,
         Orange,
@@ -9,7 +9,7 @@
         Pineapple
     }
 
-    enum SodaEnum
+    enum SodaType
     {
         CocaCola,
         Sprite,
@@ -18,7 +18,7 @@
         Pepsi
     }
 
-    enum WaterEnum
+    enum WaterType
     {
         Water
     }

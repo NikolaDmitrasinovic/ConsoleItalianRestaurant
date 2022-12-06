@@ -1,6 +1,6 @@
-﻿namespace ConsoleItalianRestaurant.Kitchen.Foods.FoodsFactory
+﻿namespace ConsoleItalianRestaurant.Menus.Foods.FoodsFactroy
 {
-    enum PizzaEnum
+    enum PizzaType
     {
         Capricciosa,
         Siciliana,
@@ -10,7 +10,7 @@
         Salsiccia
     }
 
-    enum PastaEnum
+    enum PastaType
     {
         Italiana,
         Carbonara,
@@ -22,7 +22,7 @@
         Lasagne
     }
 
-    enum SideDishEnum
+    enum SideDishType
     {
         Ketchup,
         Oregano,

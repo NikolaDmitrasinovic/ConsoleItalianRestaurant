@@ -1,21 +1,21 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Diagnostics.Metrics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ConsoleItalianRestaurant.Kitchen.Drinks.DrinksFactory
+namespace ConsoleItalianRestaurant.Menus.Drinks.DrinksFactory
 {
     internal static class DrinkFactory
     {
-        public static List<Drink> MakeDrinksMenu()
+        public static List<Drink> AvailableDrinks()
         {
             Random rdm = new Random();
             List<Drink> drinksList = new List<Drink>();
             List<string> drinkNamesList = new List<string>();
             string drinkName = "";
             Drink drink;
+            double[] volume = new double[3];
             int counter = 0;
 
             do
@@ -42,19 +42,31 @@ namespace ConsoleItalianRestaurant.Kitchen.Drinks.DrinksFactory
                 }
             } while (counter < 3);
 
-            foreach (string name in drinkNamesList)
+            for (int i = 0; i < 3; i++)
             {
-                if (Enum.IsDefined(typeof(WaterEnum), name))
+                if (rdm.Next(0,2) == 0)
                 {
-                    drink = new Water(name, rdm.Next(150, 500), 0.5m);
-                }
-                else if (Enum.IsDefined(typeof(SodaEnum), name))
-                {
-                    drink = new Soda(name, rdm.Next(150, 500), 0.5m);
+                    volume[i] = 0.3;
                 }
                 else
                 {
-                    drink = new Juce(name, rdm.Next(150, 500), 0.5m);
+                    volume[i] = 0.5;
+                }
+            }
+
+            foreach (string name in drinkNamesList)
+            {
+                if (Enum.IsDefined(typeof(WaterType), name))
+                {
+                    drink = new Water(name, rdm.Next(150, 500), volume[0]);
+                }
+                else if (Enum.IsDefined(typeof(SodaType), name))
+                {
+                    drink = new Soda(name, rdm.Next(150, 500), volume[1]);
+                }
+                else
+                {
+                    drink = new Juice(name, rdm.Next(150, 500), volume[2]);
                 }
 
                 drinksList.Add(drink);
