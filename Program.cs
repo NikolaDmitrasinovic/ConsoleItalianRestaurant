@@ -17,10 +17,10 @@ namespace ConsoleItalianRestaurant
             Table table3 = new Table();
             Table table4 = new Table();
 
-            table1.OrderItems.Add(21);
-            table1.OrderItems.Add(23);
-            table1.OrderItems.Add(17);
-            table2.OrderItems.Add(45);
+            table1.OrderItems.Add(1);
+            table1.OrderItems.Add(3);
+            table1.OrderItems.Add(7);
+            table2.OrderItems.Add(5);
 
             try
             {
@@ -40,7 +40,7 @@ namespace ConsoleItalianRestaurant
                 Console.WriteLine(xcp.Message);
             }
 
-            table2.OrderItems.Add(60);
+            table2.OrderItems.Add(6);
 
             table1.PayLastBill();
 
