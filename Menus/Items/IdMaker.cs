@@ -8,8 +8,8 @@ namespace ConsoleItalianRestaurant.Menus.Items
 {
     internal sealed class IdMaker
     {
-        private IdMaker instance = new IdMaker();
-        public IdMaker Instance
+        private static IdMaker instance = new IdMaker();
+        public static IdMaker Instance
         {
             get
             {
@@ -21,11 +21,16 @@ namespace ConsoleItalianRestaurant.Menus.Items
             }
         }
 
-        private static int id = 0;
+        private int Id { get; set; }
 
-        public static int GetId()
+        private IdMaker()
         {
-            return id++;
+            Id = 0;
+        }
+
+        public int GetId()
+        {
+            return Id++;
         }
     }
 }

@@ -17,7 +17,9 @@ namespace ConsoleItalianRestaurant.Menus.Foods
 
         protected Food(string name, double price)
         {
-            Id = IdMaker.GetId();
+            IdMaker id = IdMaker.Instance;
+
+            Id = id.GetId();
             Name = name;
             Price = price;
             SideDishList = new List<SideDish>();
