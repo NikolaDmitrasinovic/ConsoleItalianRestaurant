@@ -28,15 +28,13 @@ namespace ConsoleItalianRestaurant.Restaurant.Tables
 
         public void MakeNewOrder()
         {
-            Bill lastBill = Bills.LastOrDefault();
-
-            if (Bills.Count==0 || lastBill.Paid==true)
+            if (Bills.Count==0 || Bills.LastOrDefault().Paid==true)
             {
                 List<IItem> items = new List<IItem>();
-                Menu menuInst = new Menu();
+                Menu menu = Menu.Instance;
                 foreach (int item in OrderItems)
                 {
-                    items.Add(menuInst.MenuOfTheDay.SingleOrDefault(p => p.Id == item));
+                    items.Add(menu.MenuOfTheDay.SingleOrDefault(p => p.Id == item));
                 }
                 Bills.Add(new Bill(Id, items));
                 OrderItems.Clear();

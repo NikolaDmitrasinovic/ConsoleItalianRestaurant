@@ -9,7 +9,7 @@ namespace ConsoleItalianRestaurant
         static void Main(string[] args)
         {
             Console.WriteLine("Welcome to Italian Restaurant!");
-            Menu ourMenu = new Menu();
+            Menu ourMenu = Menu.Instance;
             ourMenu.PrintMenu();
 
             Table table1 = new Table();

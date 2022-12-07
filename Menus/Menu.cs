@@ -30,7 +30,7 @@ namespace ConsoleItalianRestaurant.Menus
         private List<Drink> drinkMenu = DrinkFactory.AvailableDrinks();
         public List<IItem> MenuOfTheDay { get; }
         
-        public Menu()
+        private Menu()
         {
             MenuOfTheDay = new List<IItem>();
 
