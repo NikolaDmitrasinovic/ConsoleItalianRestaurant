@@ -1,4 +1,5 @@
 ﻿using ConsoleItalianRestaurant.Menus.IItems;
+using ConsoleItalianRestaurant.Menus.Items;
 using ConsoleItalianRestaurant.Menus.Utils;
 using System;
 using System.Collections.Generic;
@@ -8,18 +9,12 @@ using System.Threading.Tasks;
 
 namespace ConsoleItalianRestaurant.Menus.Drinks
 {
-    internal abstract class Drink : IItem
+    internal abstract class Drink : Item, IItem
     {
-        public int Id { get;  }
-        public string Name { get;  }
-        public double Price { get;  }
         public double Volume { get;  }
 
-        protected Drink(string name, double price, double volume)
+        protected Drink(string name, double price, double volume):base(name, price)
         {
-            Id = IdMaker.Instance.GetId();
-            Name = name;
-            Price = price;
             Volume = volume;
         }
     }
