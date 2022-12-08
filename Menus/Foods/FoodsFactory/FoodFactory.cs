@@ -14,25 +14,19 @@ namespace ConsoleItalianRestaurant.Menus.Foods.FoodsFactory
         {
             Random rdm = new Random();
             List<Pizza> pizzaList = new List<Pizza>();
-            List<PizzaType> pizzaTypesList = new List<PizzaType>();
-            PizzaType name;
-            int counter = 0;
 
-            do
+            int idx = -1;
+            List<int> indices = new List<int>();
+
+            while (pizzaList.Count<4)
             {
-                name = (PizzaType)rdm.Next(0, 6);
-
-                if (!pizzaTypesList.Contains(name))
+                do
                 {
-                    pizzaTypesList.Add(name);
-                    counter++;
-                }
-            } while (counter < 4);
+                    idx = rdm.Next(0, 6);
+                } while (idx < 0 && indices.Contains(idx));
 
-            for (int i = 0; i < 4; i++)
-            {
-                Pizza pizza = new Pizza(pizzaTypesList[i].ToString(), rdm.Next(300, 601));
-                pizzaList.Add(pizza);
+                indices.Add(idx);
+                pizzaList.Add(new Pizza(((PizzaType)idx).ToString(), rdm.Next(300, 601)));
             }
 
             return pizzaList;
