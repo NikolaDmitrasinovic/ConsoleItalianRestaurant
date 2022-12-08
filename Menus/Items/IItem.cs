@@ -8,8 +8,6 @@ namespace ConsoleItalianRestaurant.Menus.IItems
 {
     internal interface IItem
     {
-        public int Id { get;  }
-        public string Name { get;  }
-        public double Price { get;  }
+        
     }
 }
