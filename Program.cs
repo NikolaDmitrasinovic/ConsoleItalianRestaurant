@@ -20,19 +20,11 @@ namespace ConsoleItalianRestaurant
             table1.OrderItems.Add(1);
             table1.OrderItems.Add(3);
             table1.OrderItems.Add(7);
-            table2.OrderItems.Add(5);
+            table2.OrderItems.Add(1);
 
             try
             {
                 table1.MakeNewOrder();
-            }
-            catch (Exception xcp)
-            {
-                Console.WriteLine(xcp.Message);
-            }
-
-            try
-            {
                 table2.MakeNewOrder();
             }
             catch (Exception xcp)
@@ -43,7 +35,7 @@ namespace ConsoleItalianRestaurant
             table2.OrderItems.Add(6);
 
             table1.PayLastBill();
-
+            
             try
             {
                 table2.MakeNewOrder();

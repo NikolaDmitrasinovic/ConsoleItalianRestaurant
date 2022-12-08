@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ConsoleItalianRestaurant.Menus.Items
+namespace ConsoleItalianRestaurant.Menus.Utils
 {
     internal sealed class IdMaker
     {
@@ -13,7 +13,7 @@ namespace ConsoleItalianRestaurant.Menus.Items
         {
             get
             {
-                if (instance==null)
+                if (instance == null)
                 {
                     instance = new IdMaker();
                 }
