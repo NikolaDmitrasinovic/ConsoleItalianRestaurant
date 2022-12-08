@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using ConsoleItalianRestaurant.Menus.IItems;
+using ConsoleItalianRestaurant.Menus.Items;
 
 namespace ConsoleItalianRestaurant.Restaurant.Bills
 {
@@ -11,7 +12,7 @@ namespace ConsoleItalianRestaurant.Restaurant.Bills
     {
         public DateTime Time { get; }
         public int TableId { get;  }
-        public List<IItem> Order { get; }
+        public List<Item> Order { get; }
         public double Price { get; }
 
         private bool paid;
@@ -19,7 +20,7 @@ namespace ConsoleItalianRestaurant.Restaurant.Bills
 
         public static List<Bill> AllBills = new List<Bill>();
 
-        public Bill(int tableId, List<IItem> order)
+        public Bill(int tableId, List<Item> order)
         {
             
             Time = DateTime.Now;
@@ -33,7 +34,7 @@ namespace ConsoleItalianRestaurant.Restaurant.Bills
         private double OrderPrice()
         {
             double price = 0;
-            foreach (IItem item in Order)
+            foreach (Item item in Order)
             {
                 price += item.Price;
             }

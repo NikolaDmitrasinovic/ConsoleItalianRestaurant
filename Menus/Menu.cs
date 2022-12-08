@@ -3,6 +3,7 @@ using ConsoleItalianRestaurant.Menus.Drinks.DrinksFactory;
 using ConsoleItalianRestaurant.Menus.Foods;
 using ConsoleItalianRestaurant.Menus.Foods.FoodsFactory;
 using ConsoleItalianRestaurant.Menus.IItems;
+using ConsoleItalianRestaurant.Menus.Items;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -28,11 +29,11 @@ namespace ConsoleItalianRestaurant.Menus
 
         private List<Food> foodMenu = FoodFactory.AvailableFoods();
         private List<Drink> drinkMenu = DrinkFactory.AvailableDrinks();
-        public List<IItem> MenuOfTheDay { get; }
+        public List<Item> MenuOfTheDay { get; }
         
         private Menu()
         {
-            MenuOfTheDay = new List<IItem>();
+            MenuOfTheDay = new List<Item>();
 
             foreach (Food item in foodMenu)
             {

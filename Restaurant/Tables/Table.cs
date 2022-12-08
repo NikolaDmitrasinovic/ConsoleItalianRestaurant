@@ -7,6 +7,7 @@ using ConsoleItalianRestaurant.Menus.IItems;
 using ConsoleItalianRestaurant.Restaurant.Bills;
 using ConsoleItalianRestaurant.Menus;
 using ConsoleItalianRestaurant.Menus.Foods;
+using ConsoleItalianRestaurant.Menus.Items;
 
 namespace ConsoleItalianRestaurant.Restaurant.Tables
 {
@@ -30,7 +31,7 @@ namespace ConsoleItalianRestaurant.Restaurant.Tables
         {
             if (Bills.Count==0 || Bills.LastOrDefault().Paid==true)
             {
-                List<IItem> items = new List<IItem>();
+                List<Item> items = new List<Item>();
                 Menu menu = Menu.Instance;
                 foreach (int item in OrderItems)
                 {
