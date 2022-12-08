@@ -17,9 +17,7 @@ namespace ConsoleItalianRestaurant.Menus.Drinks
 
         protected Drink(string name, double price, double volume)
         {
-            IdMaker id = IdMaker.Instance;
-
-            Id = id.GetId();
+            Id = IdMaker.Instance.GetId();
             Name = name;
             Price = price;
             Volume = volume;
